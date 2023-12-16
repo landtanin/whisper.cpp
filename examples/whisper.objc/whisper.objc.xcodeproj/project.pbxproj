@@ -29,10 +29,8 @@
 		F30043422B2DD54300153308 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = F30043412B2DD54300153308 /* AudioKit */; };
 		F30043442B2DD6E400153308 /* long_audio_file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F30043432B2DD6E400153308 /* long_audio_file.mp3 */; };
 		F30043472B2DD89D00153308 /* test_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F30043452B2DD7AD00153308 /* test_audio.m4a */; };
-		F30043492B2DD8BF00153308 /* ggml-tiny.bin in Resources */ = {isa = PBXBuildFile; fileRef = F30043482B2DD8BF00153308 /* ggml-tiny.bin */; };
 		F300434B2B2DE6DB00153308 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300434A2B2DE6DB00153308 /* LibWhisper.swift */; };
 		F300434D2B2DEE5200153308 /* long_audio_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F300434C2B2DEE5200153308 /* long_audio_30.mp3 */; };
-		F31AAB8B2B24B88B00C134D3 /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */; };
 		F31AAB8F2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */; };
 /* End PBXBuildFile section */
 
@@ -89,10 +87,8 @@
 		F30043392B2DCF1A00153308 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		F30043432B2DD6E400153308 /* long_audio_file.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = long_audio_file.mp3; sourceTree = "<group>"; };
 		F30043452B2DD7AD00153308 /* test_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_audio.m4a; sourceTree = "<group>"; };
-		F30043482B2DD8BF00153308 /* ggml-tiny.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-tiny.bin"; sourceTree = "<group>"; };
 		F300434A2B2DE6DB00153308 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
 		F300434C2B2DEE5200153308 /* long_audio_30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = long_audio_30.mp3; sourceTree = "<group>"; };
-		F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base.en.bin"; sourceTree = "<group>"; };
 		F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "ggml-base.en-encoder.mlmodelc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,8 +135,6 @@
 				184447192AB211A2007D6BFE /* ggml-alloc.h */,
 				F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */,
 				7FE342442A0C3FA20015A058 /* coreml */,
-				F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */,
-				F30043482B2DD8BF00153308 /* ggml-tiny.bin */,
 				F30043432B2DD6E400153308 /* long_audio_file.mp3 */,
 				F300434C2B2DEE5200153308 /* long_audio_30.mp3 */,
 				F30043452B2DD7AD00153308 /* test_audio.m4a */,
@@ -253,9 +247,7 @@
 				F30043442B2DD6E400153308 /* long_audio_file.mp3 in Resources */,
 				18627C8629052BE000BD2A04 /* Assets.xcassets in Resources */,
 				F31AAB8F2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc in Resources */,
-				F30043492B2DD8BF00153308 /* ggml-tiny.bin in Resources */,
 				18627C8429052BDF00BD2A04 /* Main.storyboard in Resources */,
-				F31AAB8B2B24B88B00C134D3 /* ggml-base.en.bin in Resources */,
 				F30043472B2DD89D00153308 /* test_audio.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
