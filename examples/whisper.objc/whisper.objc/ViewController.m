@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "whisper_objc-Swift.h"
 
 #import "whisper.h"
 
@@ -161,6 +162,11 @@ void AudioInputCallback(void * inUserData,
     }
 }
 
+- (IBAction)goToAnotherScreen:(id)sender {
+    SwiftViewController *viewController = [[SwiftViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 - (IBAction)onRealtime:(id)sender {
     stateInp.isRealtime = !stateInp.isRealtime;
 
@@ -196,6 +202,7 @@ void AudioInputCallback(void * inUserData,
         // get maximum number of threads on this device (max 8)
         const int max_threads = MIN(8, (int)[[NSProcessInfo processInfo] processorCount]);
 
+        // model settings, set language, etc
         params.print_realtime   = true;
         params.print_progress   = false;
         params.print_timestamps = true;
@@ -212,6 +219,8 @@ void AudioInputCallback(void * inUserData,
 
         whisper_reset_timings(self->stateInp.ctx);
 
+        // this is where transcription happens.
+        // audioBufferF32 carries the audio buffer captured in the class.
         if (whisper_full(self->stateInp.ctx, params, self->stateInp.audioBufferF32, self->stateInp.n_samples) != 0) {
             NSLog(@"Failed to run the model");
             self->_textviewResult.text = @"Failed to run the model";

@@ -19,13 +19,20 @@
 		18627C8C29052BE000BD2A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18627C8B29052BE000BD2A04 /* main.m */; };
 		18627C9429052C4900BD2A04 /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18627C9329052C4900BD2A04 /* whisper.cpp */; settings = {COMPILER_FLAGS = "-DWHISPER_USE_COREML -DWHISPER_COREML_ALLOW_FALLBACK -DGGML_USE_METAL"; }; };
 		18627C9629052C5800BD2A04 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = 18627C9529052C5800BD2A04 /* ggml.c */; settings = {COMPILER_FLAGS = "-DGGML_USE_ACCELERATE -DGGML_USE_METAL"; }; };
-		18627C9B29052CFF00BD2A04 /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = 18627C9A29052CFF00BD2A04 /* ggml-base.en.bin */; };
 		18ABE15A2AF556340044A204 /* ggml-backend.c in Sources */ = {isa = PBXBuildFile; fileRef = 18ABE1572AF556340044A204 /* ggml-backend.c */; };
 		18ABE15B2AF556340044A204 /* ggml-quants.c in Sources */ = {isa = PBXBuildFile; fileRef = 18ABE1592AF556340044A204 /* ggml-quants.c */; };
 		7FE3424B2A0C3FA20015A058 /* whisper-encoder-impl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE342452A0C3FA20015A058 /* whisper-encoder-impl.m */; };
 		7FE3424C2A0C3FA20015A058 /* whisper-encoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7FE342472A0C3FA20015A058 /* whisper-encoder.mm */; };
 		7FE3424D2A0C3FA20015A058 /* whisper-decoder-impl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3424A2A0C3FA20015A058 /* whisper-decoder-impl.m */; };
-		7FE3424F2A0C418A0015A058 /* ggml-base.en-encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 7FE3424E2A0C418A0015A058 /* ggml-base.en-encoder.mlmodelc */; };
+		F30043332B2DC87C00153308 /* whisper_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F30043312B2DC87C00153308 /* whisper_utils.cpp */; };
+		F300433A2B2DCF1A00153308 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043392B2DCF1A00153308 /* SwiftViewController.swift */; };
+		F30043422B2DD54300153308 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = F30043412B2DD54300153308 /* AudioKit */; };
+		F30043442B2DD6E400153308 /* long_audio_file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F30043432B2DD6E400153308 /* long_audio_file.mp3 */; };
+		F30043472B2DD89D00153308 /* test_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F30043452B2DD7AD00153308 /* test_audio.m4a */; };
+		F30043492B2DD8BF00153308 /* ggml-tiny.bin in Resources */ = {isa = PBXBuildFile; fileRef = F30043482B2DD8BF00153308 /* ggml-tiny.bin */; };
+		F300434B2B2DE6DB00153308 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300434A2B2DE6DB00153308 /* LibWhisper.swift */; };
+		F31AAB8B2B24B88B00C134D3 /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */; };
+		F31AAB8F2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,7 +69,6 @@
 		18627C9329052C4900BD2A04 /* whisper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = whisper.cpp; path = ../../../whisper.cpp; sourceTree = "<group>"; };
 		18627C9529052C5800BD2A04 /* ggml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = ../../../ggml.c; sourceTree = "<group>"; };
 		18627C9729052C6600BD2A04 /* ggml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ggml.h; path = ../../../ggml.h; sourceTree = "<group>"; };
-		18627C9A29052CFF00BD2A04 /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "ggml-base.en.bin"; path = "../../../models/ggml-base.en.bin"; sourceTree = "<group>"; };
 		18ABE1542AF556340044A204 /* ggml-quants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ggml-quants.h"; path = "../../../ggml-quants.h"; sourceTree = "<group>"; };
 		18ABE1552AF556340044A204 /* ggml-backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ggml-backend.h"; path = "../../../ggml-backend.h"; sourceTree = "<group>"; };
 		18ABE1562AF556340044A204 /* ggml-backend-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ggml-backend-impl.h"; path = "../../../ggml-backend-impl.h"; sourceTree = "<group>"; };
@@ -75,7 +81,17 @@
 		7FE342482A0C3FA20015A058 /* whisper-decoder-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "whisper-decoder-impl.h"; sourceTree = "<group>"; };
 		7FE342492A0C3FA20015A058 /* whisper-encoder-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "whisper-encoder-impl.h"; sourceTree = "<group>"; };
 		7FE3424A2A0C3FA20015A058 /* whisper-decoder-impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "whisper-decoder-impl.m"; sourceTree = "<group>"; };
-		7FE3424E2A0C418A0015A058 /* ggml-base.en-encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ggml-base.en-encoder.mlmodelc"; path = "../../../models/ggml-base.en-encoder.mlmodelc"; sourceTree = "<group>"; };
+		F30043312B2DC87C00153308 /* whisper_utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = whisper_utils.cpp; sourceTree = "<group>"; };
+		F30043322B2DC87C00153308 /* whisper_utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = whisper_utils.hpp; sourceTree = "<group>"; };
+		F30043372B2DC98C00153308 /* dr_wav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dr_wav.h; sourceTree = "<group>"; };
+		F30043382B2DCF1A00153308 /* whisper.objc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisper.objc-Bridging-Header.h"; sourceTree = "<group>"; };
+		F30043392B2DCF1A00153308 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		F30043432B2DD6E400153308 /* long_audio_file.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = long_audio_file.mp3; sourceTree = "<group>"; };
+		F30043452B2DD7AD00153308 /* test_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_audio.m4a; sourceTree = "<group>"; };
+		F30043482B2DD8BF00153308 /* ggml-tiny.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-tiny.bin"; sourceTree = "<group>"; };
+		F300434A2B2DE6DB00153308 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base.en.bin"; sourceTree = "<group>"; };
+		F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "ggml-base.en-encoder.mlmodelc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30043422B2DD54300153308 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +135,12 @@
 				1844471B2AB21655007D6BFE /* ggml-metal.m */,
 				184447182AB211A2007D6BFE /* ggml-alloc.c */,
 				184447192AB211A2007D6BFE /* ggml-alloc.h */,
-				7FE3424E2A0C418A0015A058 /* ggml-base.en-encoder.mlmodelc */,
+				F31AAB8E2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc */,
 				7FE342442A0C3FA20015A058 /* coreml */,
-				18627C9A29052CFF00BD2A04 /* ggml-base.en.bin */,
+				F31AAB8A2B24B88B00C134D3 /* ggml-base.en.bin */,
+				F30043482B2DD8BF00153308 /* ggml-tiny.bin */,
+				F30043432B2DD6E400153308 /* long_audio_file.mp3 */,
+				F30043452B2DD7AD00153308 /* test_audio.m4a */,
 				18627C9729052C6600BD2A04 /* ggml.h */,
 				18627C9529052C5800BD2A04 /* ggml.c */,
 				18627C9329052C4900BD2A04 /* whisper.cpp */,
@@ -136,6 +156,12 @@
 				18627C8729052BE000BD2A04 /* LaunchScreen.storyboard */,
 				18627C8A29052BE000BD2A04 /* Info.plist */,
 				18627C8B29052BE000BD2A04 /* main.m */,
+				F30043372B2DC98C00153308 /* dr_wav.h */,
+				F30043312B2DC87C00153308 /* whisper_utils.cpp */,
+				F30043322B2DC87C00153308 /* whisper_utils.hpp */,
+				F30043392B2DCF1A00153308 /* SwiftViewController.swift */,
+				F30043382B2DCF1A00153308 /* whisper.objc-Bridging-Header.h */,
+				F300434A2B2DE6DB00153308 /* LibWhisper.swift */,
 			);
 			path = whisper.objc;
 			sourceTree = "<group>";
@@ -171,6 +197,9 @@
 			dependencies = (
 			);
 			name = whisper.objc;
+			packageProductDependencies = (
+				F30043412B2DD54300153308 /* AudioKit */,
+			);
 			productName = whisper.objc;
 			productReference = 18627C7629052BDF00BD2A04 /* whisper.objc.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +215,7 @@
 				TargetAttributes = {
 					18627C7529052BDF00BD2A04 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -198,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 18627C6D29052BDF00BD2A04;
+			packageReferences = (
+				F30043402B2DD54300153308 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 18627C7729052BDF00BD2A04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,10 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18627C8929052BE000BD2A04 /* LaunchScreen.storyboard in Resources */,
-				7FE3424F2A0C418A0015A058 /* ggml-base.en-encoder.mlmodelc in Resources */,
+				F30043442B2DD6E400153308 /* long_audio_file.mp3 in Resources */,
 				18627C8629052BE000BD2A04 /* Assets.xcassets in Resources */,
+				F31AAB8F2B24B8E900C134D3 /* ggml-base.en-encoder.mlmodelc in Resources */,
+				F30043492B2DD8BF00153308 /* ggml-tiny.bin in Resources */,
 				18627C8429052BDF00BD2A04 /* Main.storyboard in Resources */,
-				18627C9B29052CFF00BD2A04 /* ggml-base.en.bin in Resources */,
+				F31AAB8B2B24B88B00C134D3 /* ggml-base.en.bin in Resources */,
+				F30043472B2DD89D00153308 /* test_audio.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,14 +263,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F300433A2B2DCF1A00153308 /* SwiftViewController.swift in Sources */,
 				18627C8129052BDF00BD2A04 /* ViewController.m in Sources */,
 				18ABE15B2AF556340044A204 /* ggml-quants.c in Sources */,
 				7FE3424C2A0C3FA20015A058 /* whisper-encoder.mm in Sources */,
+				F300434B2B2DE6DB00153308 /* LibWhisper.swift in Sources */,
 				18627C9429052C4900BD2A04 /* whisper.cpp in Sources */,
 				18627C9629052C5800BD2A04 /* ggml.c in Sources */,
 				18627C7B29052BDF00BD2A04 /* AppDelegate.m in Sources */,
 				7FE3424D2A0C3FA20015A058 /* whisper-decoder-impl.m in Sources */,
 				1844471A2AB211A2007D6BFE /* ggml-alloc.c in Sources */,
+				F30043332B2DC87C00153308 /* whisper_utils.cpp in Sources */,
 				18ABE15A2AF556340044A204 /* ggml-backend.c in Sources */,
 				18627C8C29052BE000BD2A04 /* main.m in Sources */,
 				18627C7E29052BDF00BD2A04 /* SceneDelegate.m in Sources */,
@@ -384,12 +423,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P8JZH34X63;
+				DEVELOPMENT_TEAM = 9739RA7ZLD;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = whisper.objc/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -400,9 +441,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ggerganov.whisper-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.tanin.whisper-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "whisper.objc/whisper.objc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -412,12 +456,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P8JZH34X63;
+				DEVELOPMENT_TEAM = 9739RA7ZLD;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = whisper.objc/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -428,9 +474,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ggerganov.whisper-objc";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.tanin.whisper-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "whisper.objc/whisper.objc-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -457,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F30043402B2DD54300153308 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F30043412B2DD54300153308 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30043402B2DD54300153308 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18627C6E29052BDF00BD2A04 /* Project object */;
 }
