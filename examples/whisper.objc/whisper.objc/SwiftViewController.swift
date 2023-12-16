@@ -44,7 +44,7 @@ class SwiftViewController: UIViewController {
             return 0
         }
 
-        let inputURL = Bundle.main.url(forResource: "long_audio_file", withExtension: "mp3", subdirectory: "")!
+        let inputURL = Bundle.main.url(forResource: "long_audio_30", withExtension: "mp3", subdirectory: "")!
 //        let inputURL = URL(string: audioFilePath)!
         let converter = FormatConverter(inputURL: inputURL, outputURL: outputURL, options: options)
 //        converter.start { error in
@@ -77,13 +77,13 @@ class SwiftViewController: UIViewController {
         converter.start { error in
             if error == nil {
                 Task(priority: .userInitiated) {
-                    let modelURL = Bundle.main.url(forResource: "ggml-tiny", withExtension: "bin", subdirectory: "")
+                    let modelURL = Bundle.main.url(forResource: "ggml-base.en", withExtension: "bin", subdirectory: "")
                     let whisperContext = try! WhisperContext.createContext(path: modelURL!.path())
                     
                     let audioFile = try! AVAudioFile(forReading: outputURL)
-                    let segmentDuration = 600.0 // 10 mins segment
+                    let segmentDuration: TimeInterval = 300.0 // 5 mins segment
                     
-                    var startTime = 0.0
+                    var startTime: TimeInterval = 0.0
                     while startTime < audioFile.duration {
                         let endTime = min(startTime + segmentDuration, audioFile.duration)
                         let segmentBuffer = audioFile.extractSegment(startTime: startTime, endTime: endTime)
@@ -97,9 +97,9 @@ class SwiftViewController: UIViewController {
                             audioData[i] = channelData.pointee[i]
                         }
                         
-                        let text = await whisperContext.fullTranscribe(samples: audioData)
-                        print("startTime: \(startTime)\n")
-                        print("text: \(text)\n")
+                        let _ = await whisperContext.fullTranscribe(samples: audioData)
+//                        print("startTime: \(startTime)\n")
+//                        print("text: \(text)\n")
                         
                         startTime = endTime
                     }
@@ -112,18 +112,18 @@ class SwiftViewController: UIViewController {
 
 extension AVAudioFile {
     func extractSegment(startTime: TimeInterval, endTime: TimeInterval) -> AVAudioPCMBuffer? {
+        let sampleRate = self.fileFormat.sampleRate
+        let startFrame = AVAudioFramePosition(startTime * sampleRate)
+        let endFrame = AVAudioFramePosition(endTime * sampleRate)
+        let frameCount = AVAudioFrameCount(endFrame - startFrame)
+
+        guard let buffer = AVAudioPCMBuffer(pcmFormat: self.processingFormat, frameCapacity: frameCount) else {
+            return nil
+        }
+
         do {
-            let audioFile = try AVAudioFile(forReading: self.url)
-            let sampleRate = audioFile.fileFormat.sampleRate
-            let startFrame = AVAudioFramePosition(startTime * sampleRate)
-            let endFrame = AVAudioFramePosition(endTime * sampleRate)
-            let frameCount = AVAudioFrameCount(endFrame - startFrame)
-
-            guard let buffer = AVAudioPCMBuffer(pcmFormat: audioFile.processingFormat, frameCapacity: frameCount) else {
-                return nil
-            }
-
-            try audioFile.read(into: buffer, frameCount: frameCount)
+            self.framePosition = startFrame // Set the frame position to the start of the segment
+            try self.read(into: buffer, frameCount: frameCount)
             return buffer
         } catch {
             print("Error extracting audio segment: \(error)")
@@ -131,3 +131,4 @@ extension AVAudioFile {
         }
     }
 }
+
