@@ -44,6 +44,9 @@ examples/arm_neon.h
 examples/whisper.objc/whisper.objc.xcodeproj/xcshareddata
 examples/whisper.objc/whisper.objc.xcodeproj/xcuserdata/
 examples/whisper.objc/whisper.objc.xcodeproj/project.xcworkspace/xcuserdata
+examples/whisper.objc/whisper.objc/ggml-base.en.
+examples/whisper.objc/whisper.objc/ggml-tiny.bin
+examples/whisper.swiftui/whisper.swiftui.demo/Resources/models/ggml-base.bin
 
 extra/bench-gg.txt
 
@@ -59,5 +62,3 @@ cmake-build-debug/
 .cxx/
 .gradle/
 local.properties
-
-examples/whisper.objc/whisper.objc/ggml*
