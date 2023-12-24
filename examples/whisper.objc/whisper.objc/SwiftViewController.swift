@@ -72,7 +72,6 @@ class SwiftViewController: UIViewController, TrancribeVC {
     
     var audioQueue: AudioQueueRef?
     var audioBuffers: [AudioQueueBufferRef?] = Array(repeating: nil, count: NUM_BUFFERS)
-    var isCapturing = false
     var isTranscribing = false
     var isRealtime = false
     // TODO: Memory should be managed smartly using malloc and free
@@ -243,7 +242,7 @@ class SwiftViewController: UIViewController, TrancribeVC {
     }
     
     @objc func toggleCapture(_ sender: UIButton) {
-        guard !isCapturing else {
+        guard !stateInp.isCapturing else {
             stopCapturing()
             return
         }
@@ -302,6 +301,10 @@ class SwiftViewController: UIViewController, TrancribeVC {
             }
             AudioQueueDispose(queue, true)
             stateInp.queue = nil
+            
+            print("Stop capturing done")
+        } else {
+            print("Stop capturing failed")
         }
     }
     
