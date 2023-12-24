@@ -61,7 +61,7 @@ actor WhisperContext {
         return transcription
     }
 
-    // path to model
+    // MARK: Helper
     static func createContext(path: String) throws -> WhisperContext {
         var params = whisper_context_default_params()
 #if targetEnvironment(simulator)
